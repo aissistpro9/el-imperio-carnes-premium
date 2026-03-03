@@ -1,0 +1,47 @@
+<!-- Collections Management (Cobranzas) -->
+<div class="min-h-screen">
+    <header class="sticky top-0 z-30 glass border-b border-white/5">
+        <div class="px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <h1 class="text-xl font-bold text-white">Gestion de Cobranzas</h1>
+                <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">85.3% Recaudo</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="bg-white/5 border border-white/10 text-slate-300 px-4 py-2 rounded-lg text-sm flex items-center gap-2 hover:bg-white/10 transition"><span class="material-symbols-outlined text-sm">download</span> Exportar</button>
+                <button onclick="showToast('Recordatorios enviados por WhatsApp', 'send')" class="bg-primary text-white font-bold px-4 py-2 rounded-lg text-sm flex items-center gap-2 hover:bg-primary-dark transition">
+                    <span class="material-symbols-outlined text-sm">notifications_active</span> Enviar Recordatorios
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="p-6 space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-card rounded-xl p-5"><span class="material-symbols-outlined text-primary text-2xl mb-2">account_balance_wallet</span><p class="text-2xl font-bold text-white">$145.3M</p><p class="text-xs text-slate-500 uppercase tracking-wider">Cartera Total</p></div>
+            <div class="glass-card rounded-xl p-5"><span class="material-symbols-outlined text-emerald-400 text-2xl mb-2">trending_up</span><p class="text-2xl font-bold text-white">$123.9M</p><p class="text-xs text-slate-500 uppercase tracking-wider">Recaudado</p></div>
+            <div class="glass-card rounded-xl p-5"><span class="material-symbols-outlined text-red-400 text-2xl mb-2">warning</span><p class="text-2xl font-bold text-white">$21.4M</p><p class="text-xs text-slate-500 uppercase tracking-wider">Vencido</p></div>
+            <div class="glass-card rounded-xl p-5"><span class="material-symbols-outlined text-amber-400 text-2xl mb-2">schedule</span><p class="text-2xl font-bold text-white">18</p><p class="text-xs text-slate-500 uppercase tracking-wider">Clientes Morosos</p></div>
+        </div>
+        <div class="glass-card rounded-xl p-6">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">analytics</span>Analisis de Cartera por Antiguedad</h3>
+            <div class="space-y-4">
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-slate-300">Al dia (0-15 dias)</span><span class="text-emerald-400 font-bold">$98.2M (67.6%)</span></div><div class="h-3 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width:67.6%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-slate-300">Vigente (16-30 dias)</span><span class="text-amber-400 font-bold">$25.7M (17.7%)</span></div><div class="h-3 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-amber-500 rounded-full" style="width:17.7%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-slate-300">Vencido (31-60 dias)</span><span class="text-orange-400 font-bold">$14.8M (10.2%)</span></div><div class="h-3 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-orange-500 rounded-full" style="width:10.2%"></div></div></div>
+                <div><div class="flex justify-between text-sm mb-1"><span class="text-slate-300">Critico (&gt;60 dias)</span><span class="text-red-400 font-bold">$6.6M (4.5%)</span></div><div class="h-3 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-red-500 rounded-full" style="width:4.5%"></div></div></div>
+            </div>
+        </div>
+        <div class="glass-card rounded-xl p-6">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-accent-gold text-lg">people</span>Clientes con Saldo Pendiente</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead><tr class="text-xs text-slate-500 uppercase tracking-wider border-b border-white/5"><th class="px-4 py-3 text-left">Cliente</th><th class="px-4 py-3 text-right">Saldo</th><th class="px-4 py-3 text-center">Dias</th><th class="px-4 py-3 text-center">Estado</th><th class="px-4 py-3 text-center">Acciones</th></tr></thead>
+                    <tbody>
+                        <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-4 py-3 text-sm text-white font-medium">Frigorifico Del Norte</td><td class="px-4 py-3 text-sm text-right font-bold text-red-400">$3.2M</td><td class="px-4 py-3 text-center"><span class="text-red-400 text-sm font-bold">45</span></td><td class="px-4 py-3 text-center"><span class="bg-red-500/10 text-red-400 text-xs font-bold px-2.5 py-1 rounded-full">Vencido</span></td><td class="px-4 py-3 text-center"><button onclick="showToast('Cobro registrado para Frigorifico Del Norte', 'payments')" class="text-primary hover:text-primary-dark text-sm font-bold">Registrar Pago</button></td></tr>
+                        <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-4 py-3 text-sm text-white font-medium">Restaurante El Chef</td><td class="px-4 py-3 text-sm text-right font-bold text-amber-400">$1.8M</td><td class="px-4 py-3 text-center"><span class="text-amber-400 text-sm font-bold">22</span></td><td class="px-4 py-3 text-center"><span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full">Vigente</span></td><td class="px-4 py-3 text-center"><button onclick="showToast('Cobro registrado para Restaurante El Chef', 'payments')" class="text-primary hover:text-primary-dark text-sm font-bold">Registrar Pago</button></td></tr>
+                        <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-4 py-3 text-sm text-white font-medium">Hotel Royal Plaza</td><td class="px-4 py-3 text-sm text-right font-bold text-emerald-400">$950K</td><td class="px-4 py-3 text-center"><span class="text-emerald-400 text-sm font-bold">8</span></td><td class="px-4 py-3 text-center"><span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">Al dia</span></td><td class="px-4 py-3 text-center"><button onclick="showToast('Cobro registrado para Hotel Royal Plaza', 'payments')" class="text-primary hover:text-primary-dark text-sm font-bold">Registrar Pago</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

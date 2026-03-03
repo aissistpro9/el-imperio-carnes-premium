@@ -1,0 +1,76 @@
+<!-- Executive Admin Dashboard -->
+<div class="min-h-screen">
+    <header class="sticky top-0 z-30 glass border-b border-white/5">
+        <div class="px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <h1 class="text-xl font-bold text-white">Dashboard Ejecutivo</h1>
+                <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">En Linea</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <span class="material-symbols-outlined text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 text-lg">search</span>
+                    <input type="text" placeholder="Buscar..." class="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-slate-500 w-64 outline-none focus:border-primary" />
+                </div>
+                <button class="relative text-slate-400 hover:text-white transition">
+                    <span class="material-symbols-outlined text-xl">notifications</span>
+                    <span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-primary"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="p-6 space-y-6">
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-card rounded-xl p-5"><div class="flex items-center justify-between mb-3"><span class="material-symbols-outlined text-primary text-2xl">account_balance_wallet</span><span class="text-emerald-400 text-xs font-bold">12.5%</span></div><p class="text-2xl font-bold text-white">$145.3M</p><p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Cartera Total</p></div>
+            <div class="glass-card rounded-xl p-5"><div class="flex items-center justify-between mb-3"><span class="material-symbols-outlined text-emerald-400 text-2xl">payments</span><span class="text-emerald-400 text-xs font-bold">8.2%</span></div><p class="text-2xl font-bold text-white">$18.7M</p><p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Recaudos Hoy</p></div>
+            <div class="glass-card rounded-xl p-5"><div class="flex items-center justify-between mb-3"><span class="material-symbols-outlined text-accent-gold text-2xl">shopping_cart</span><span class="text-emerald-400 text-xs font-bold">15%</span></div><p class="text-2xl font-bold text-white">47</p><p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Pedidos Hoy</p></div>
+            <div class="glass-card rounded-xl p-5"><div class="flex items-center justify-between mb-3"><span class="material-symbols-outlined text-blue-400 text-2xl">route</span><span class="text-amber-400 text-xs font-bold">4 activas</span></div><p class="text-2xl font-bold text-white">12/16</p><p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Rutas Cerradas</p></div>
+        </div>
+        <!-- Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 glass-card rounded-xl p-6">
+                <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">bar_chart</span>Recaudos Semanales</h3>
+                <div class="flex items-end gap-3 h-48">
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary/20 rounded-t-md" style="height: 65%"></div><span class="text-[10px] text-slate-500">Lun</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary/30 rounded-t-md" style="height: 80%"></div><span class="text-[10px] text-slate-500">Mar</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary/40 rounded-t-md" style="height: 55%"></div><span class="text-[10px] text-slate-500">Mie</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary/60 rounded-t-md" style="height: 92%"></div><span class="text-[10px] text-slate-500">Jue</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary rounded-t-md magenta-glow" style="height: 100%"></div><span class="text-[10px] text-white font-bold">Vie</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-primary/20 rounded-t-md" style="height: 40%"></div><span class="text-[10px] text-slate-500">Sab</span></div>
+                    <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-white/5 rounded-t-md" style="height: 15%"></div><span class="text-[10px] text-slate-500">Dom</span></div>
+                </div>
+            </div>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-lg">map</span>Estado de Rutas</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="size-2 rounded-full bg-emerald-400"></span><span class="text-sm text-slate-300">Ruta Norte</span></div><span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">Completada</span></div>
+                    <div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="size-2 rounded-full bg-primary animate-pulse"></span><span class="text-sm text-slate-300">Ruta Centro</span></div><span class="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">En Curso</span></div>
+                    <div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="size-2 rounded-full bg-emerald-400"></span><span class="text-sm text-slate-300">Ruta Sur</span></div><span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">Completada</span></div>
+                    <div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="size-2 rounded-full bg-amber-400 animate-pulse"></span><span class="text-sm text-slate-300">Ruta Especial</span></div><span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">Pendiente</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Orders Table -->
+        <div class="glass-card rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-white font-bold flex items-center gap-2"><span class="material-symbols-outlined text-accent-gold text-lg">list_alt</span>Pedidos Recientes</h3>
+                <a href="#/orders" class="text-primary text-sm font-bold hover:text-primary-dark transition">Ver todos</a>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead><tr class="text-xs text-slate-500 uppercase tracking-wider border-b border-white/5"><th class="px-4 py-3 text-left">Pedido</th><th class="px-4 py-3 text-left">Cliente</th><th class="px-4 py-3 text-left">Productos</th><th class="px-4 py-3 text-left">Total</th><th class="px-4 py-3 text-left">Estado</th><th class="px-4 py-3 text-left">Hora</th></tr></thead>
+                    <tbody id="orders-tbody"><!-- Injected by JS --></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Alerts -->
+        <div class="glass-card rounded-xl p-6">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-amber-400 text-lg">warning</span>Alertas Activas</h3>
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/20"><span class="material-symbols-outlined text-red-400">error</span><p class="text-sm text-slate-300"><span class="text-red-400 font-bold">Cartera vencida:</span> 3 clientes con mora &gt; 30 dias ($4.2M)</p><span class="text-xs text-slate-500 ml-auto">Hace 2h</span></div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-amber-500/5 border border-amber-500/20"><span class="material-symbols-outlined text-amber-400">inventory_2</span><p class="text-sm text-slate-300"><span class="text-amber-400 font-bold">Stock bajo:</span> Solomito de Res (quedan 12 unidades)</p><span class="text-xs text-slate-500 ml-auto">Hace 45m</span></div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-500/5 border border-blue-500/20"><span class="material-symbols-outlined text-blue-400">local_shipping</span><p class="text-sm text-slate-300"><span class="text-blue-400 font-bold">Ruta retrasada:</span> Ruta Centro con 15 min de retraso</p><span class="text-xs text-slate-500 ml-auto">Hace 20m</span></div>
+            </div>
+        </div>
+    </div>
+</div>

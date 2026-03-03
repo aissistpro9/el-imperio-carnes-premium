@@ -1,0 +1,60 @@
+<!-- Login Page -->
+<div class="min-h-screen flex">
+    <div class="hidden lg:flex w-1/2 relative items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbnISsyb1u14I6Gse-u2OpgxlDyk6vON3O1-YgxXmFOatIN_il2w29HXBD3H9SSuFRF75y1ojG7ZUBM5yUHl0xj1s7_O--xhgU00Tiug2y8EeDG28aeAhglJVslrBCra5TttKWfStvjf6gcE3C--0rs23vUG9zrJLNke-VITV3KVgsV_buwuLvbrutsRP_PFlKle5metIFKbfltZiChgWe5g3oH2hOTWRu4nkaj9QXXKJRVRYLsU4Mo-xXhVaXujf7T_ksJ8_Jewo" alt="Heritage" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
+        </div>
+        <div class="relative z-10 text-center px-12">
+            <img src="img/logo.webp" alt="El Imperio Carnes Premium" class="h-24 mx-auto mb-6">
+            <p class="text-slate-300 text-lg max-w-md mx-auto leading-relaxed">Plataforma integral de gestion, distribucion y ventas premium.</p>
+            <div class="flex gap-6 justify-center mt-12">
+                <div class="text-center"><p class="text-3xl font-bold text-white">1,800+</p><p class="text-slate-400 text-xs uppercase tracking-wider">Clientes</p></div>
+                <div class="w-px bg-white/10"></div>
+                <div class="text-center"><p class="text-3xl font-bold text-white">98.5%</p><p class="text-slate-400 text-xs uppercase tracking-wider">Satisfaccion</p></div>
+                <div class="w-px bg-white/10"></div>
+                <div class="text-center"><p class="text-3xl font-bold text-white">24/7</p><p class="text-slate-400 text-xs uppercase tracking-wider">Soporte</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 flex items-center justify-center px-6 py-12">
+        <div class="w-full max-w-md">
+            <div class="lg:hidden text-center mb-10">
+                <img src="img/logo.webp" alt="El Imperio Carnes Premium" class="h-16 mx-auto mb-2">
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-2">Iniciar Sesion</h2>
+            <p class="text-slate-400 mb-8">Ingresa a la plataforma de gestion</p>
+            <form id="login-form" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Correo Electronico</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 text-lg">mail</span>
+                        <input id="login-email" type="email" placeholder="admin@elimperio.com" value="admin@elimperio.com" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-slate-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Contrasena</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 text-lg">lock</span>
+                        <input id="login-password" type="password" placeholder="••••••••" value="imperio2024" class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-slate-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" />
+                    </div>
+                </div>
+                <div id="login-error" class="hidden bg-red-500/10 text-red-400 text-sm px-4 py-3 rounded-lg border border-red-500/20"></div>
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-lg transition-all magenta-glow flex items-center justify-center gap-2 text-sm">
+                    <span class="material-symbols-outlined text-lg">login</span>
+                    Acceder al Sistema
+                </button>
+            </form>
+            <div class="mt-8 glass-gold rounded-xl p-4">
+                <p class="text-accent-gold text-xs font-bold uppercase tracking-wider mb-2">Demo - Credenciales</p>
+                <div class="text-sm text-slate-300 space-y-1">
+                    <p><span class="text-slate-500">Email:</span> admin@elimperio.com</p>
+                    <p><span class="text-slate-500">Password:</span> imperio2024</p>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-sm mt-8">
+                <a href="#/landing" class="text-primary hover:text-primary-dark transition">Volver al inicio</a>
+            </p>
+        </div>
+    </div>
+</div>

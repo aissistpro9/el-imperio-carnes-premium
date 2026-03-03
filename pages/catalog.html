@@ -1,0 +1,55 @@
+<!-- Catalog Page -->
+<div class="min-h-screen">
+    <header class="sticky top-0 z-30 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+                <a href="#/landing" class="flex items-center gap-2 mr-6"><img src="img/logo.webp" alt="El Imperio" class="h-8 w-auto object-contain"></a>
+                <div class="relative">
+                    <span class="material-symbols-outlined text-slate-400 absolute left-3 top-1/2 -translate-y-1/2">search</span>
+                    <input type="text" placeholder="Buscar cortes, productos..." class="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-slate-500 focus:border-primary outline-none w-64" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#/cart" class="relative text-slate-400 hover:text-primary transition">
+                    <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+                    <span class="cart-count cart-badge">0</span>
+                </a>
+                <a href="#/login" class="text-sm text-primary font-bold hover:text-primary-dark transition">Mi Cuenta</a>
+            </div>
+        </div>
+    </header>
+    <div class="promo-gradient py-3 text-center">
+        <p class="text-white text-sm font-medium">&#x1F525; <span class="font-bold">ENVIO GRATIS</span> en pedidos mayores a $200.000 &mdash; Codigo: <span class="font-bold">IMPERIO2024</span></p>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <aside class="w-full md:w-64 flex-shrink-0 space-y-6">
+                <div class="glass-panel rounded-xl p-5">
+                    <h3 class="text-white font-bold text-sm mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">filter_list</span>Categorias</h3>
+                    <div class="space-y-2">
+                        <button class="cat-filter active-filter w-full text-left px-3 py-2 rounded-lg text-sm transition" data-cat="Todos">Todos los Productos</button>
+                        <button class="cat-filter w-full text-left px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition" data-cat="Res">&#x1F969; Res</button>
+                        <button class="cat-filter w-full text-left px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition" data-cat="Pollo">&#x1F357; Pollo</button>
+                        <button class="cat-filter w-full text-left px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition" data-cat="Cerdo">&#x1F953; Cerdo</button>
+                        <button class="cat-filter w-full text-left px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition" data-cat="Salsamentaria">&#x1F32D; Salsamentaria</button>
+                        <button class="cat-filter w-full text-left px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition" data-cat="Pescados">&#x1F41F; Pescados</button>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-xl p-5">
+                    <h3 class="text-white font-bold text-sm mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">sell</span>Rango de Precio</h3>
+                    <div class="space-y-3">
+                        <input type="range" min="10000" max="150000" value="150000" class="w-full accent-primary" />
+                        <div class="flex justify-between text-xs text-slate-500"><span>$10,000</span><span>$150,000</span></div>
+                    </div>
+                </div>
+            </aside>
+            <main class="flex-1">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-serif font-bold text-white">Catalogo Premium</h2>
+                    <p class="text-slate-400 text-sm"><span id="product-count" class="text-primary font-bold">12</span> productos</p>
+                </div>
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Products injected by JS --></div>
+            </main>
+        </div>
+    </div>
+</div>

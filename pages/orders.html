@@ -1,0 +1,69 @@
+<!-- Order Taking Module -->
+<div class="min-h-screen">
+    <header class="sticky top-0 z-30 glass border-b border-white/5">
+        <div class="px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <h1 class="text-xl font-bold text-white">Toma de Pedidos</h1>
+                <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Nuevo Pedido</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="bg-white/5 border border-white/10 text-slate-300 px-4 py-2 rounded-lg text-sm hover:bg-white/10 transition">Cancelar</button>
+                <button onclick="showToast('Pedido guardado como borrador', 'save')" class="bg-primary/20 text-primary font-bold px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">Guardar Borrador</button>
+            </div>
+        </div>
+    </header>
+    <div class="flex gap-6 p-6 h-[calc(100vh-4rem)]">
+        <div class="flex-1 space-y-6 overflow-y-auto pr-2">
+            <div class="glass-card rounded-xl p-5">
+                <h3 class="text-white font-bold text-sm mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">person_search</span>Cliente</h3>
+                <div class="relative">
+                    <span class="material-symbols-outlined text-slate-400 absolute left-3 top-1/2 -translate-y-1/2">search</span>
+                    <input type="text" placeholder="Buscar cliente por nombre, NIT o codigo..." value="Restaurante El Chef - NIT: 900.123.456-7" class="w-full bg-white/5 border border-primary/30 rounded-lg pl-10 pr-4 py-3 text-white text-sm focus:border-primary outline-none" />
+                </div>
+                <div class="flex flex-wrap gap-3 mt-3">
+                    <span class="text-xs bg-white/5 text-slate-400 px-3 py-1 rounded-full">Cra 15 #82-34, Bogota</span>
+                    <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full">Credito Aprobado</span>
+                    <span class="text-xs bg-accent-gold/10 text-accent-gold px-3 py-1 rounded-full">Cliente Premium</span>
+                </div>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <h3 class="text-white font-bold text-sm mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">inventory_2</span>Agregar Productos</h3>
+                <div class="relative mb-4">
+                    <span class="material-symbols-outlined text-slate-400 absolute left-3 top-1/2 -translate-y-1/2">search</span>
+                    <input type="text" placeholder="Buscar producto..." class="w-full bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-white text-sm focus:border-primary outline-none" />
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead><tr class="text-xs text-slate-500 uppercase tracking-wider border-b border-white/5"><th class="px-3 py-2 text-left">Producto</th><th class="px-3 py-2 text-left">Cat</th><th class="px-3 py-2 text-right">Precio/kg</th><th class="px-3 py-2 text-center">Kg</th><th class="px-3 py-2 text-right">Subtotal</th><th class="px-3 py-2"></th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-3 py-3 text-sm text-white font-medium">Solomito de Res</td><td class="px-3 py-3 text-xs text-slate-400">Res</td><td class="px-3 py-3 text-sm text-primary text-right font-bold">$85,000</td><td class="px-3 py-3 text-center"><input type="number" value="15" class="w-16 bg-white/5 border border-white/10 rounded text-center text-white text-sm py-1" /></td><td class="px-3 py-3 text-sm text-white text-right font-bold">$1,275,000</td><td class="px-3 py-3 text-center"><button class="text-red-400 hover:text-red-300"><span class="material-symbols-outlined text-sm">close</span></button></td></tr>
+                            <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-3 py-3 text-sm text-white font-medium">Lomo de Res Premium</td><td class="px-3 py-3 text-xs text-slate-400">Res</td><td class="px-3 py-3 text-sm text-primary text-right font-bold">$32,500</td><td class="px-3 py-3 text-center"><input type="number" value="25" class="w-16 bg-white/5 border border-white/10 rounded text-center text-white text-sm py-1" /></td><td class="px-3 py-3 text-sm text-white text-right font-bold">$812,500</td><td class="px-3 py-3 text-center"><button class="text-red-400 hover:text-red-300"><span class="material-symbols-outlined text-sm">close</span></button></td></tr>
+                            <tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="px-3 py-3 text-sm text-white font-medium">Chorizo Santarrosano</td><td class="px-3 py-3 text-xs text-slate-400">Embutidos</td><td class="px-3 py-3 text-sm text-primary text-right font-bold">$14,500</td><td class="px-3 py-3 text-center"><input type="number" value="10" class="w-16 bg-white/5 border border-white/10 rounded text-center text-white text-sm py-1" /></td><td class="px-3 py-3 text-sm text-white text-right font-bold">$145,000</td><td class="px-3 py-3 text-center"><button class="text-red-400 hover:text-red-300"><span class="material-symbols-outlined text-sm">close</span></button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <h3 class="text-white font-bold text-sm mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-slate-400 text-lg">sticky_note_2</span>Notas del Pedido</h3>
+                <textarea placeholder="Instrucciones especiales de entrega, corte, etc..." rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-primary outline-none resize-none"></textarea>
+            </div>
+        </div>
+        <aside class="w-80 flex-shrink-0 glass-card rounded-xl p-5 h-fit sticky top-20 space-y-5">
+            <h3 class="text-white font-bold flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">receipt_long</span>Resumen del Pedido</h3>
+            <div class="space-y-2 text-sm">
+                <div class="flex justify-between text-slate-400"><span>Subtotal:</span><span class="text-white font-bold">$2,232,500</span></div>
+                <div class="flex justify-between text-slate-400"><span>Descuento (5%):</span><span class="text-emerald-400 font-bold">-$111,625</span></div>
+                <div class="flex justify-between text-slate-400"><span>IVA (19%):</span><span class="text-white font-bold">$402,967</span></div>
+                <div class="border-t border-white/10 pt-2 flex justify-between"><span class="text-white font-bold text-lg">Total:</span><span class="text-primary font-extrabold text-xl">$2,523,842</span></div>
+            </div>
+            <div><label class="text-xs text-slate-500 uppercase tracking-wider font-bold block mb-2">Fecha de Entrega</label><input type="date" value="2024-03-15" class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-primary outline-none" /></div>
+            <div><label class="text-xs text-slate-500 uppercase tracking-wider font-bold block mb-2">Metodo de Pago</label><select class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-primary outline-none"><option>Credito 30 dias</option><option>Contra Entrega</option><option>Transferencia</option></select></div>
+            <button onclick="showToast('Pedido #IM-2945 registrado con exito', 'check_circle')" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg transition magenta-glow flex items-center justify-center gap-2 text-sm">
+                <span class="material-symbols-outlined text-lg">send</span>Confirmar Pedido
+            </button>
+            <button onclick="showToast('Factura sincronizada con Alegra', 'sync')" class="w-full bg-blue-600/10 text-blue-400 border border-blue-500/20 font-bold py-2.5 rounded-lg transition hover:bg-blue-600/20 flex items-center justify-center gap-2 text-sm">
+                <span class="material-symbols-outlined text-lg">sync</span>Sincronizar con Alegra
+            </button>
+        </aside>
+    </div>
+</div>

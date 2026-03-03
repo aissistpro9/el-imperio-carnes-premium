@@ -1,0 +1,59 @@
+<!-- Shopping Cart & Checkout -->
+<div class="min-h-screen">
+    <header class="sticky top-0 z-30 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="#/catalog" class="text-slate-400 hover:text-white transition flex items-center gap-1 text-sm">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>Seguir Comprando
+                </a>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+                <h1 class="text-lg font-bold text-white">Mi Carrito</h1>
+                <span class="bg-primary/20 text-primary text-xs font-bold px-2 py-0.5 rounded-full cart-count">0</span>
+            </div>
+            <div></div>
+        </div>
+    </header>
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        <div id="cart-empty" class="hidden text-center py-20">
+            <span class="material-symbols-outlined text-slate-600 text-7xl mb-4">remove_shopping_cart</span>
+            <h2 class="text-2xl font-bold text-white mb-2">Tu carrito esta vacio</h2>
+            <p class="text-slate-400 mb-6">Agrega productos desde nuestro catalogo premium</p>
+            <a href="#/catalog" class="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-3 rounded-lg text-sm transition magenta-glow inline-flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">storefront</span>Ver Catalogo
+            </a>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div id="cart-items" class="flex-1 space-y-3"><!-- Items injected by JS --></div>
+            <div id="cart-summary" class="hidden w-full lg:w-96 space-y-6">
+                <div class="glass-card rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">receipt_long</span>Resumen del Pedido</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-300"><span>Subtotal</span><span id="cart-subtotal" class="text-white font-bold">$0</span></div>
+                        <div class="flex justify-between text-slate-300"><span>Envio</span><span class="text-emerald-400 font-bold">Gratis</span></div>
+                        <div class="flex justify-between text-slate-300"><span>IVA (19%)</span><span id="cart-iva" class="text-white font-bold">$0</span></div>
+                        <div class="border-t border-white/10 pt-3"></div>
+                        <div class="flex justify-between"><span class="text-white font-bold text-lg">Total</span><span id="cart-total" class="text-primary font-extrabold text-xl">$0</span></div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-xl p-6">
+                    <h3 class="text-sm font-bold text-white mb-4">Metodo de Pago</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-primary/30 cursor-pointer"><input type="radio" name="payment" value="contraentrega" checked class="accent-primary" /><span class="material-symbols-outlined text-primary text-lg">local_shipping</span><span class="text-sm text-white">Contra Entrega</span></label>
+                        <label class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 cursor-pointer"><input type="radio" name="payment" value="transferencia" class="accent-primary" /><span class="material-symbols-outlined text-slate-400 text-lg">account_balance</span><span class="text-sm text-slate-300">Transferencia Bancaria</span></label>
+                        <label class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 cursor-pointer"><input type="radio" name="payment" value="nequi" class="accent-primary" /><span class="material-symbols-outlined text-slate-400 text-lg">phone_android</span><span class="text-sm text-slate-300">Nequi / Daviplata</span></label>
+                    </div>
+                </div>
+                <button onclick="showToast('Pedido registrado exitosamente!', 'celebration'); Cart.clear(); navigate('landing');" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl transition-all magenta-glow flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-lg">lock</span>Confirmar Pedido
+                </button>
+                <div class="flex items-center justify-center gap-4 text-xs text-slate-500">
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">lock</span>SSL Seguro</span>
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">shield</span>Proteccion</span>
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">verified</span>Garantia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

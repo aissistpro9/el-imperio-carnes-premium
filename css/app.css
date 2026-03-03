@@ -1,0 +1,37 @@
+/* ===== El Imperio Carnes Premium - Global Styles ===== */
+
+.glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
+.glass-card { background: rgba(26,26,26,0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(233,32,99,0.1); }
+.glass-gold { background: rgba(212,175,55,0.03); backdrop-filter: blur(8px); border: 1px solid rgba(212,175,55,0.1); }
+.glass-panel { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
+.magenta-glow { box-shadow: 0 4px 20px rgba(233,32,99,0.4); }
+.magenta-glow-hover:hover { box-shadow: 0 0 20px rgba(233,32,99,0.3); }
+.gold-glow:hover { box-shadow: 0 0 15px rgba(212,175,55,0.3); }
+.magenta-text-glow { text-shadow: 0 0 15px rgba(233,32,99,0.5); }
+.hero-gradient { background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%); }
+.promo-gradient { background: linear-gradient(90deg, #e92063 0%, #c0166d 100%); }
+
+@keyframes slide-up { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+
+.custom-scrollbar::-webkit-scrollbar, ::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #e92063; }
+
+.page-enter { animation: fade-in 0.25s ease-out; }
+.sidebar-link.active { background: #e92063; color: white; box-shadow: 0 0 15px rgba(233,32,99,0.2); }
+.sidebar-link:not(.active) { color: #94a3b8; }
+.sidebar-link:not(.active):hover { color: #e92063; background: rgba(255,255,255,0.05); }
+
+.cart-badge { position: absolute; top: -4px; right: -4px; background: #e92063; color: white; font-size: 10px; font-weight: 800; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #0A0A0A; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+input, textarea, select { background-color: rgba(255,255,255,0.05) !important; color: white !important; border-color: rgba(255,255,255,0.1) !important; }
+input::placeholder, textarea::placeholder { color: rgb(100,116,139) !important; }
+input:focus, textarea:focus, select:focus { border-color: rgba(233,32,99,0.5) !important; outline: none !important; box-shadow: 0 0 0 3px rgba(233,32,99,0.15) !important; }
+.active-filter { background: #e92063 !important; color: white !important; border-color: #e92063 !important; }
